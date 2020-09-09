@@ -3,6 +3,12 @@
 set -e
 set -x
 
+echo $@
+echo "====================="
+echo $(env)
+echo "====================="
+echo "====================="
+
 wget_once() {
   url="$1"
   if ! test -f `basename "$url"`; then
